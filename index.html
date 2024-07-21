@@ -1,71 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>CSS Practice: CSS Corner Café</title>
-    <link rel="stylesheet" href="css/styles.css" />
-  </head>
-  <body>
-    <h1>  • CSS Corner Café • </h1>
-    <img
-      src="images/CSS Cafe.png"
-      height="300"
-      alt="image of an open laptop and coffee cups at a cafe table"
-      id="coffee"
-    />
-    <section>
-      <h2>Menu &#9749;</h2>
-      <table>
-        <thead>
-          <tr style="background-color: rgb(176, 173, 173)" />
-            <th>Item</th>
-            <th>Cost</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Coffee</td>
-            <td>$2</td>
-          </tr>
-          <tr>
-            <td>Tea</td>
-            <td>$1.50</td>
-          </tr>
-          <tr>
-            <td>Chicken & Waffles</td>
-            <td>$12</td>
-          </tr>
-          <tr>
-            <td>Blueberry Pancakes</td>
-            <td>$6</td>
-          </tr>
-        </tbody>
-      </table>
-    </section>
-    <section>
-      <h2>Submit Your Review &#11088;&#11088;&#11088;&#11088;&#11088;</h2>
-      <form
-        action="https://us-central1-nucamp-production.cloudfunctions.net/post/formdata"
-        method="post"
-      >
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name" />
-        <label for="rating">Your Rating:</label>
-        1 <input type="range" id="rating" name="rating" min="1" max="5"/> 5<p></p>
-        <input type="submit" id="submit-btn" />
-      </form>
-    </section>
-    <section>
-      <h2>Contact Us &#128222;</h2>
-      <div>
-        Call us at: <a href="tel:+15555551212">1-555-555-1212</a><p></p>
-        <address>
-          CSS Corner Cafe<br />
-          101 W Main St<br />
-          Bellevue, WA 98004
-        </address>
+<head>
+<meta charset="utf-8" />
+<!--Authors: Mann Jaiswal, Misha Kahiwa, Jessica Nakamura, Sibel Cengiz, Teja Vickrey-->
+<title>Cozy Cups Coffee Shop</title>
+<link rel="stylesheet" href="css/styles.css" />
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOMpQ/5XFCU9t94W9jy6DQ7cYlgc1hKYZ5k6C+/2"
+crossorigin="anonymous"
+/>
+<link
+rel="stylesheet"
+href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+crossorigin="anonymous"
+/>
+</head>
+<body>`
+<h1>• Cozy Cups Coffee Shop •</h1>
+<h2 class="h5 text-muted">Cozy up with the best coffee in town!</h2>
+
+<header class="bg-light py-3">
+<div class="container">
+<div class="row align-items-center">
+<div class="col-4 col-sm-3 col-md-2">
+<img src="img/coffeelogo.png" width=150 height=150 class="jpg-fluid" alt="Logo"/>
+</div>
+<div class="col-8">
+
+</div>
+
+
+    <!--Reserve Modal Button-->
+    
+<div class="col text-right">
+    <button class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#reserveForm">Reserve a Table</button>
+</div>
+
+<!--Reserve Modal-->
+
+<div id="reserveForm" class="modal fade" role="dialog">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header w-100">
+          <h3 class="modal-title">Reserve a Table</h3>
+          <button type="button" class="close" data-bs-dismiss="modal">&times;</button>
       </div>
+      <div class="modal-body">
+        <form action="https://us-central1-nucamp-production.cloudfunctions.net/post/formdata" method="post"></form>
+        <div class="container-fluid">
+            <div class="form-group row">
+                <label for="name" class="col-sm-3 col-form-label">Name:</label>
+                <input for="name" class="form-control" id="name" placeholder="Enter name">
+                <label for="number" class="col-sm-3 col-form-label">Phone Number:</label>
+                <input for="number" class="form-control" id="number" placeholder="Enter phone number">
+               <label for="partynumber" class="col-sm-3 col-form-label">Number in Party:</label>
+            <div class="col-sm-9">
+                <select id="partynumber" name="partynumber" class="form-control">
+            <option>Select...</option>
+            <option value="one">1</option>
+            <option value="two">2</option>
+            <option value="three">3</option>
+            <option value="four">4</option>
+            <option value="five">5</option>
+            <option value="six">6</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group row">
+            <label for="date" class="col-sm-3 col-form-label">Date</label>
+            <div class="col-sm-9">
+                <input type="date" id="date" name="date" class="form-control">
+        </div>
+      </div>
+      <div class="mb-3 row">
+        <div class="col">
+            <button type="cancel" class="btn btn-dark" data-bs-dismiss="modal">Cancel</button>
+          <button type="submit" class="btn btn-secondary">Request Reservation</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+    </div>
+  </div>
+</div>
+</div>
+</div>
+</header>
+
+<nav class="navbar navbar-expand-sm navbar-dark sticky-top bg-dark">
+<div class="container">
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#coffeeNavbar">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="coffeeNavbar">
+<ul class="navbar-nav ml-auto">
+<li class="nav-item"><a class="nav-link active" href="#"><i class="fa-solid fa-house fa-lg"></i> Home</a></li>
+<li class="nav-item"><a class="nav-link" href="#"><i class="fa-solid fa-info fa-lg"></i> Menu</a></li>
+<li class="nav-item"><a class="nav-link" href="#"><i class="fa-solid fa-list fa-lg"></i> About Us</a></li>
+<li class="nav-item"><a class="nav-link" href="#"><i class="fa-solid fa-address-card fa-lg"></i> Contact</a></li>
+</ul>
+</div>
+</div>
+</nav>
+
+<main class="container mt-4">
+    <section class="mb-5">
+    <h2>Our Coffees</h2>
+    <div class="row">
+    <!-- Coffee Card 1 -->
+    <div class="col-md-4 mb-4">
+    <div class="card">
+    <img class="card-img-top" src="img/coffee-1.jpg" alt="Coffee 1">
+    <div class="card-body">
+    <h5 class="card-title">Espresso</h5>
+    <p class="card-text">A strong and rich coffee made with finely ground coffee beans.</p>
+    <p class="card-text"><strong>$3.00</strong></p>
+    <a href="#" class="btn btn-primary">Buy Now</a>
+    </div>
+    </div>
+    </div>
+    <!-- Coffee Card 2 -->
+    <div class="col-md-4 mb-4">
+    <div class="card">
+    <img class="card-img-top" src="img/coffee-2.jpg" alt="Coffee 2">
+    <div class="card-body">
+    <h5 class="card-title">Latte</h5>
+    <p class="card-text">A smooth and creamy coffee made with steamed milk and espresso.</p>
+    <p class="card-text"><strong>$4.00</strong></p>
+    <a href="#" class="btn btn-primary">Buy Now</a>
+    </div>
+    </div>
+    </div>
+    <!-- Coffee Card 3 -->
+    <div class="col-md-4 mb-4">
+    <div class="card">
+    <img class="card-img-top" src="img/coffee-3.jpg" alt="Coffee 3">
+    <div class="card-body">
+    <h5 class="card-title">Cappuccino</h5>
+    <p class="card-text">A classic coffee with a rich espresso base topped with steamed milk foam.</p>
+    <p class="card-text"><strong>$3.50</strong></p>
+    <a href="#" class="btn btn-primary">Buy Now</a>
+    </div>
+    </div>
+    </div>
+    </div>
     </section>
-    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
-  </body>
+
+    <!--Google Maps location Embedding-->
+    <section id="location">
+        <h2>Find Us Here &#128205;</h2>
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3319.202989049268!2d151.0975259754293!3d-33.7036960105258!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12a7f3a1b7ff89%3A0xd4d5632f66458534!2sCozy%20Cups%3A%20Cafe%20%26%20Dessert!5e0!3m2!1sen!2sus!4v1721589308280!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section>
+
+    
+    </main>
+<script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script> 
+</body>
 </html>
