@@ -2,111 +2,44 @@
 <html lang="en">
 <head>
 <meta charset="utf-8" />
-<!--Authors: Mann Jaiswal, Misha Kahiwa, Jessica Nakamura, Sibel Cengiz, Teja Vickrey-->
-<title>Cozy Cups Coffee Shop</title>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+<title>Esprésso</title>
+<link href='https://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet'>
 <link rel="stylesheet" href="css/styles.css" />
-<link
-rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOMpQ/5XFCU9t94W9jy6DQ7cYlgc1hKYZ5k6C+/2"
-crossorigin="anonymous"
-/>
-<link
-rel="stylesheet"
-href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-crossorigin="anonymous"
-/>
 </head>
-<body>`
-<h1>• Cozy Cups Coffee Shop •</h1>
-<h2 class="h5 text-muted">Cozy up with the best coffee in town!</h2>
-
-<header class="bg-light py-3">
+<!-- Body -->
+<body>
+<header class="py-3">
 <div class="container">
 <div class="row align-items-center">
-<div class="col-4 col-sm-3 col-md-2">
-<img src="img/coffeelogo.png" width=150 height=150 class="jpg-fluid" alt="Logo"/>
-</div>
-<div class="col-8">
-
-</div>
-
-
-    <!--Reserve Modal Button-->
-    
-<div class="col text-right">
-    <button class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#reserveForm">Reserve a Table</button>
-</div>
-
-<!--Reserve Modal-->
-
-<div id="reserveForm" class="modal fade" role="dialog">
-  <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header w-100">
-          <h3 class="modal-title">Reserve a Table</h3>
-          <button type="button" class="close" data-bs-dismiss="modal">&times;</button>
-      </div>
-      <div class="modal-body">
-        <form action="https://us-central1-nucamp-production.cloudfunctions.net/post/formdata" method="post"></form>
-        <div class="container-fluid">
-            <div class="form-group row">
-                <label for="name" class="col-sm-3 col-form-label">Name:</label>
-                <input for="name" class="form-control" id="name" placeholder="Enter name">
-                <label for="number" class="col-sm-3 col-form-label">Phone Number:</label>
-                <input for="number" class="form-control" id="number" placeholder="Enter phone number">
-               <label for="partynumber" class="col-sm-3 col-form-label">Number in Party:</label>
-            <div class="col-sm-9">
-                <select id="partynumber" name="partynumber" class="form-control">
-            <option>Select...</option>
-            <option value="one">1</option>
-            <option value="two">2</option>
-            <option value="three">3</option>
-            <option value="four">4</option>
-            <option value="five">5</option>
-            <option value="six">6</option>
-          </select>
-        </div>
-      </div>
-      <div class="form-group row">
-            <label for="date" class="col-sm-3 col-form-label">Date</label>
-            <div class="col-sm-9">
-                <input type="date" id="date" name="date" class="form-control">
-        </div>
-      </div>
-      <div class="mb-3 row">
-        <div class="col">
-            <button type="cancel" class="btn btn-dark" data-bs-dismiss="modal">Cancel</button>
-          <button type="submit" class="btn btn-secondary">Request Reservation</button>
-        </div>
-      </div>
-    </form>
+<div class="img-container">
+  <img src="img/logo-transparent.png" id="logo" width="350" height="300"/>
+<img src="img/espresso-transparent.png" id="shopname" width=600 height=200 alt="Logo"/>
+<nav class="navbar bg-body-transparent">
+  <div class="container-fluid">
+    <button data-mdb-button-init class="navbar-toggler ms-auto" type="button" data-mdb-collapse-init
+      data-mdb-target="#navbarToggleExternalContent3" aria-controls="navbarToggleExternalContent3"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <i class="fas fa-bars"></i>
+    </button>
   </div>
-</div>
-
-    </div>
-  </div>
-</div>
-</div>
-</div>
-</header>
-
-<nav class="navbar navbar-expand-sm navbar-dark sticky-top bg-dark">
-<div class="container">
-<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#coffeeNavbar">
-<span class="navbar-toggler-icon"></span>
-</button>
-<div class="collapse navbar-collapse" id="coffeeNavbar">
-<ul class="navbar-nav ml-auto">
-<li class="nav-item"><a class="nav-link active" href="#"><i class="fa-solid fa-house fa-lg"></i> Home</a></li>
-<li class="nav-item"><a class="nav-link" href="#"><i class="fa-solid fa-info fa-lg"></i> Menu</a></li>
-<li class="nav-item"><a class="nav-link" href="#"><i class="fa-solid fa-list fa-lg"></i> About Us</a></li>
-<li class="nav-item"><a class="nav-link" href="#"><i class="fa-solid fa-address-card fa-lg"></i> Contact</a></li>
-</ul>
-</div>
-</div>
 </nav>
+<div class="collapse" id="navbarToggleExternalContent3">
+  <div class="bg-body-tertiary shadow-3 p-4">
+    <button data-mdb-button-init data-mdb-ripple-init
+      class="btn btn-link btn-block border-bottom m-0">Link 1</button>
+    <button data-mdb-button-init data-mdb-ripple-init
+      class="btn btn-link btn-block border-bottom m-0">Link 2</button>
+    <button data-mdb-button-init data-mdb-ripple-init class="btn btn-link btn-block m-0">Link 3</button>
+  </div>
+</div>
+<div class="img-container text-center">
+  <img src="img/white-cup.png" class="img-fluid" id="headerimage"/>
+</div>
+</div>
+
+</header>
 
 <main class="container mt-4">
     <section class="mb-5">

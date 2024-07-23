@@ -1,17 +1,18 @@
 /* General styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Merriweather';
+    font-size: 22px;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #290f05;
     color: #333;
 }
 
 h1 {
-    text-align: center;
+    text-align: left;
     color: #6B4F4F;
     padding: 1rem;
-    background-color: #F8EDEB;
+    background-color: #290f05;
 }
 
 h2 {
@@ -20,16 +21,24 @@ h2 {
     text-align: center;
 }
 
-img#coffee {
-    display: block;
-    margin: 2rem auto;
+#logo {
+    margin-left: -100px;
+}
+
+#shopname {
+    margin-left: -180px;
 }
 
 /* Header styles */
 header {
-    background-color: #fff;
+    background-color: #290f05;
     padding: 1rem 0;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#headerimage {
+    opacity: 0.8;
+    border: 4px solid black;
 }
 
 header h1 {
@@ -78,40 +87,6 @@ section {
 
 .table-responsive {
     margin: 2rem auto;
-}
-
-/* Form styles */
-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-form label {
-    margin: 0.5rem 0;
-}
-
-form input[type="text"],
-form input[type="range"] {
-    width: 80%;
-    padding: 0.5rem;
-    margin: 0.5rem 0;
-    border: 1px solid #ddd;
-    border-radius:5px;
-}
-
-form input[type="submit"] {
-    background-color: #6B4F4F;
-    color: white;
-    padding: 0.5rem 2rem;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 1rem;
-}
-
-form input[type="submit"]:hover {
-    background-color: #A56A6A;
 }
 
 /* Contact styles */
