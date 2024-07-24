@@ -1,6 +1,5 @@
-/* General styles */
 body {
-    font-family: 'Merriweather';
+    font-family: 'Abel';
     font-size: 22px;
     margin: 0;
     padding: 0;
@@ -15,30 +14,52 @@ h1 {
     background-color: #290f05;
 }
 
-h2 {
+.espresso {
     color: #6B4F4F;
+    margin-top: 2rem;
+    text-align: center;
+    font-family: Allura;
+    font-size: 60px;
+}
+
+h2 {
+     color: #6B4F4F;
     margin-top: 2rem;
     text-align: center;
 }
 
+#hamburger {
+    color:#e5d0c8;
+}
+
+.navbar-toggler {
+    margin-right: 40px;
+    border-color:  #290f05;
+}
+
 #logo {
-    margin-left: -100px;
+    margin-left: -50px;
 }
 
 #shopname {
-    margin-left: -180px;
+    margin-left: -160px;
 }
 
 /* Header styles */
 header {
     background-color: #290f05;
     padding: 1rem 0;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(80, 74, 74, 0.1);
 }
 
 #headerimage {
     opacity: 0.8;
-    border: 4px solid black;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0;
+    padding: 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 header h1 {
@@ -58,22 +79,11 @@ header h2 {
 
 /* Navigation styles */
 .navbar {
-    background-color: #6B4F4F;
+    background-color: #290f05;
 }
 
-.navbar .navbar-brand img {
-    vertical-align: middle;
-}
-
-.navbar .nav-link {
-    color: white;
-    margin: 0 1rem;
-}
-
-.navbar .nav-link:hover {
-    background-color: #F8EDEB;
-    color: #6B4F4F;
-    border-radius: 5px;
+.cards {
+    background-color: #f3e7e2;
 }
 
 /* Section styles */
@@ -83,6 +93,16 @@ section {
     margin: 2rem auto;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-text {
+    font-size: 18px;
+    font-style: italic;
+    color:#534d4b;
+}
+
+.card-title {
+    margin-bottom: 30px;
 }
 
 .table-responsive {
@@ -118,5 +138,9 @@ address {
     border: 0;
     width: 100%;
     height: 450px;
+}
+
+#location {
+    background-color: #f3e7e2;
 }
 
