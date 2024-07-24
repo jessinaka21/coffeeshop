@@ -28,6 +28,10 @@ h2 {
     text-align: center;
 }
 
+.custom-address {
+    color: #b79d9d;
+}
+
 #hamburger {
     color:#e5d0c8;
 }
@@ -142,5 +146,20 @@ address {
 
 #location {
     background-color: #f3e7e2;
+}
+
+.bi {
+    padding: 10px;
+}
+
+#socials {
+    color:  #290f05;
+}
+
+.main-paragraph {
+    background-color: #290f05;
+    color:#b79d9d; 
+    margin-top: 70px;
+    margin-bottom: 70px;
 }
 
