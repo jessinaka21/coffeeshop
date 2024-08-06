@@ -11,6 +11,7 @@ h1 {
     text-align: left;
     color: #290f05;
     padding: 1rem;
+    margin-bottom: 20px;
 }
 
 .espresso {
@@ -29,7 +30,7 @@ h2 {
 
 .custom-address {
     color: #b79d9d;
-    margin-left: -20px;
+    text-align: right;
 }
 
 #logo {
@@ -115,11 +116,6 @@ section div a:hover {
     text-decoration: underline;
 }
 
-address {
-    text-align: center;
-    margin-top: 1rem;
-}
-
 .map-container {
     text-align: center;
     margin: 2rem 0;
@@ -203,7 +199,40 @@ address {
     color: #b79d9d;
     font-size: 40px;
 }
-.about-us {
+.about-us,
+#about-location {
     background-color: #f3e7e2;
     opacity: 70%;
+}
+
+.float-left {
+  float: left; /* Floats the image to the left */
+  margin-right: 30px; /* Adds space between the image and the text */
+  margin-bottom: 10px; /* Optional: Adds space below the image */
+}
+
+.float-right {
+  float: right; /* Floats the image to the right */
+  margin-left: 30px; /* Adds space between the image and the text */
+  margin-bottom: 10px;
+  margin-top: 30px;
+}
+
+/* Optional: Clearfix to ensure proper clearing of floats */
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.hover-opacity {
+      transition: opacity 0.3s ease; /* Smooth transition effect */
+    }
+    .hover-opacity:hover {
+      opacity: 0.7; /* Change the opacity on hover */
+    }
+    a img {
+  display: block; /* Prevents extra spacing below the image */
+  width: 100%; /* Ensures the image takes full width of the parent */
+  height: auto; /* Maintains aspect ratio */
 }
