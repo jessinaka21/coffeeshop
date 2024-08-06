@@ -96,14 +96,15 @@ section {
 .card-title {
     margin-bottom: 30px;
 }
- .card {
-      transition: box-shadow 0.3s ease; /* Smooth transition */
-    }
 
-    /* Shadow effect on hover */
-    .card:hover {
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Change shadow properties as needed */
+ .card {
+      transition: box-shadow 0.3s ease;
     }
+    
+    .card:hover {
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      overflow: hidden;
+    }  
 
 .table-responsive {
     margin: 2rem auto;
@@ -158,7 +159,7 @@ section div a:hover {
   height: 100%; /* 100% Full-height */
   width: 0; /* 0 width - change this with JavaScript */
   position: fixed; /* Stay in place */
-  z-index: 1; /* Stay on top */
+  z-index: 1050; /* Stay on top */
   top: 0;
   right: 0;
   background-color: #111; /* Black*/
@@ -239,6 +240,7 @@ section div a:hover {
     .hover-opacity:hover {
       opacity: 0.7; /* Change the opacity on hover */
     }
+
     a img {
   display: block; /* Prevents extra spacing below the image */
   width: 100%; /* Ensures the image takes full width of the parent */
