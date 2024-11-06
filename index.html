@@ -21,7 +21,7 @@
       <div class="container-fluid">
         <img src="img/logo-transparent.png" href="#" class="img-fluid" id="logo" alt="Logo" width="30%" height="30%"/>
         <img src="img/espresso-transparent.png" href="#" class="img-fluid d-none d-sm-block" id="shopname" alt="Shop Name" width="45%" height="20%"/>
-        <span class="custom-address">123 Main Street; Nehvizdy, Prague 00347</span>
+        <span class="custom-address">123 Main Street; Nehvizdy, Prague <i class="bi bi-telephone hover-opacity footer-icon"></i>+1 (800) 123-4567</span>
         <!-- Use any element to open the sidenav -->
 <span onclick="openNav()"><i class="bi bi-list"></i></span>
     </nav>
@@ -31,9 +31,10 @@
   </header>
   <div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#">Home</a>
   <a href="about.html">About</a>
-  <a href="#">Menu</a>
-  <a href="#">Contact</a>
+  <a href="menu.html">Menu</a>
+  <a href="contact.html">Contact</a>
 </div>
 
 <main class="container mt-4">
@@ -102,7 +103,28 @@ function closeNav() {
   document.getElementById("main").style.marginLeft = "0";
 }</script>
 <footer>
-<p class="text-light text-center">© Copyright 2025 - Esprésso Coffee</p>
+  <div class="container">
+      <div class="row">
+        <!-- Address Column -->
+        <div class="col-md-4 footer-column">
+          <i class="bi bi-geo-alt hover-opacity footer-icon"></i>
+          <p class="footer-text footer-address">123 Main Street; Nehvizdy, Prague</p>
+        </div>
+
+        <!-- Phone Number Column -->
+        <div class="col-md-4 footer-column">
+          <i class="bi bi-telephone hover-opacity footer-icon">
+          <p class="footer-text" style="font-style: normal">+1 (800) 123-4567</p>
+        </div>
+
+        <!-- Email Column -->
+        <div class="col-md-4 footer-column">
+          <i class="bi bi-envelope hover-opacity footer-icon">
+          <p class="footer-text" style="font-style: normal">ahoj@espresso.com</p>
+        </div>
+      </div>
+    </div>
+<p class="footer-text text-center" style="font-size: 15px;">© Copyright 2025 - Esprésso Coffee<br>Website design by <a href="https://nakamurawebservices.com" target="_blank" class="footer-link">Nakamura Web Services</a></p>
 </footer>
 </body>
 </html>
