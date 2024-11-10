@@ -30,17 +30,19 @@ h2 {
 
 .custom-address {
   color: #b79d9d;
-  text-align: right;
-  margin-left: -20px;
+  text-align: center;
+  justify-content: center;
   font-size: 15px;
+  margin-bottom: 20px;
 }
 
 #logo {
   margin-left: -40px;
+  width: 30%;
 }
 
 #shopname {
-  margin-left: -140px;
+  margin-left: -160px;
 }
 
 /* Header styles */
@@ -146,6 +148,16 @@ section div a:hover {
   padding: 10px;
 }
 
+.bi-list {
+  background-color: #290f05;
+}
+
+button {
+  background-color: #290f05;
+  margin: 10px;
+  border: 0;
+}
+
 #socials {
   color: #290f05;
 }
@@ -192,11 +204,6 @@ section div a:hover {
   margin-left: 50px;
 }
 
-#main {
-  transition: margin-left 0.5s;
-  padding: 20px;
-}
-
 @media screen and (max-height: 450px) {
   .sidenav {
     padding-top: 15px;
@@ -229,7 +236,6 @@ section div a:hover {
   margin-top: 30px;
 }
 
-/* Optional: Clearfix to ensure proper clearing of floats */
 .clearfix::after {
   content: "";
   display: table;
