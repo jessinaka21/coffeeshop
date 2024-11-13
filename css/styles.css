@@ -13,7 +13,6 @@ h1 {
   padding: 1rem;
   margin-bottom: 20px;
 }
-
 .espresso {
   color: #6b4f4f;
   margin-top: 2rem;
@@ -29,20 +28,91 @@ h2 {
 }
 
 .custom-address {
+  font-family: "Abel", sans-serif;
+  font-size: 1.2rem;
   color: #b79d9d;
+}
+
+header {
+  background-color: var(--primary-color);
+}
+
+.header-logo {
+  flex: 0 0 25%;
+}
+
+.header-shopname {
+  flex: 0 0 50%;
   text-align: center;
-  justify-content: center;
-  font-size: 15px;
-  margin-bottom: 20px;
+}
+
+#logo {
+  max-width: 200px;
+  height: auto;
+}
+
+#shopname {
+  max-width: 400px;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .header-logo {
+    flex: 0 0 20%;
+  }
+
+  .header-shopname {
+    flex: 0 0 60%;
+  }
+
+  #logo {
+    max-width: 150px;
+  }
+
+  #shopname {
+    max-width: 250px;
+  }
+}
+
+@media (max-width: 576px) {
+  #logo {
+    max-width: 100px;
+  }
+
+  #shopname {
+    max-width: 180px;
+  }
+
+  .shop-name-container {
+    margin-left: 1rem;
+  }
+
+  .custom-address {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .phone-number {
+    margin-left: 0;
+  }
 }
 
 #logo {
   margin-left: -40px;
-  width: 30%;
+  max-width: 200px;
+  height: auto;
 }
 
 #shopname {
   margin-left: -160px;
+  max-width: 600px;
+  height: auto;
+}
+
+.shop-name-container {
+  margin-left: 2rem;
 }
 
 /* Header styles */
@@ -76,6 +146,16 @@ header h2 {
 /* Navigation styles */
 .navbar {
   background-color: #290f05;
+}
+
+.nav-toggle {
+  display: block !important;
+  padding: 0.5rem;
+  align-items: right;
+}
+
+.nav-toggle i {
+  color: #b79d9d;
 }
 
 .cards {

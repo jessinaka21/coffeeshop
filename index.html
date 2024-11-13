@@ -17,16 +17,27 @@
 <!-- Body -->
 <body>
 <header class="py-3">
-    <nav class="navbar bg-p">
-    <div class="container-fluid">
-        <a href="#"><img src="img/logo-transparent.png" class="img-fluid" id="logo" alt="Logo" style="width: 50%; height: auto;"/></a>
-        <a href="#"><img src="img/espresso-transparent.png" class="img-fluid d-sm-block" id="shopname" alt="Shop Name" style="width: 100%; height: auto;"/></a>
-        <button onclick="openNav()" aria-label="Open navigation menu"><i class="bi bi-list"></i></button>
-    </div>
-</nav>
-<div class="custom-address">
-            123 Main Street; Nehvizdy, Prague <i class="bi bi-telephone hover-opacity footer-icon"></i> +1 (800) 123-4567
-    </div>
+    <nav class="navbar">
+        <div class="container-fluid d-flex align-items-center">
+            <a href="index.html" class="header-logo">
+                <img src="img/logo-transparent.png" class="img-fluid" id="logo" alt="Logo"/>
+            </a>
+            <a href="index.html" class="header-shopname">
+                <img src="img/espresso-transparent.png" class="img-fluid" id="shopname" alt="Shop Name"/>
+            </a>
+            <button class="navbar-toggler border-0" onclick="openNav()">
+                <i class="bi bi-list" style="font-size: 2.5rem;"></i>
+            </button>
+        </div>
+        <div class="custom-address text-center w-100">
+            <span class="address-text">123 Main Street; Nehvizdy, Prague</span>
+            <span class="phone-number"><i class="bi bi-telephone"></i> +1 (800) 123-4567</span>
+        </div>
+    </nav>
+</header>
+
+
+
 <div class="img-container">
     <img src="img/white-cup.png" class="img-fluid" id="headerimage" alt="Header Image"/>
 </div>

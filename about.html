@@ -17,15 +17,24 @@
 <!-- Body -->
 <body>
 <header class="py-3">
-    <nav class="navbar bg-p navbar-expand-sm">
-      <div class="container-fluid">
-        <img src="img/logo-transparent.png" href="#" class="img-fluid" id="logo" alt="Logo" width="30%" height="30%"/>
-        <img src="img/espresso-transparent.png" href="#" class="img-fluid d-none d-sm-block" id="shopname" alt="Shop Name" width="45%" height="20%"/>
-        <span class="custom-address">123 Main Street; Nehvizdy, Prague <i class="bi bi-telephone hover-opacity footer-icon"></i>+1 (800) 123-4567</span>
-        <!-- Use any element to open the sidenav -->
-<span onclick="openNav()"><i class="bi bi-list"></i></span>
+    <nav class="navbar">
+        <div class="container-fluid d-flex align-items-center">
+            <a href="index.html" class="header-logo">
+                <img src="img/logo-transparent.png" class="img-fluid" id="logo" alt="Logo"/>
+            </a>
+            <a href="index.html" class="header-shopname">
+                <img src="img/espresso-transparent.png" class="img-fluid" id="shopname" alt="Shop Name"/>
+            </a>
+            <button class="navbar-toggler border-0" onclick="openNav()">
+                <i class="bi bi-list" style="font-size: 2.5rem;"></i>
+            </button>
+        </div>
+        <div class="custom-address text-center w-100">
+            <span class="address-text">123 Main Street; Nehvizdy, Prague</span>
+            <span class="phone-number"><i class="bi bi-telephone"></i> +1 (800) 123-4567</span>
+        </div>
     </nav>
-  </header>
+</header>
   <div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
   <a href="index.html">Home</a>
