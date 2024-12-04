@@ -115,6 +115,16 @@ header {
   margin-left: 2rem;
 }
 
+@media screen and (max-width: 768px) {
+  #logo {
+    margin-left: 15px;
+  }
+
+  #shopname {
+    margin-left: -100px;
+  }
+}
+
 /* Header styles */
 header {
   background-color: #290f05;
@@ -130,6 +140,16 @@ header {
   margin: 0;
   padding: 0;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.8;
+  }
 }
 
 header h1 {
@@ -158,6 +178,17 @@ header h2 {
   color: #b79d9d;
 }
 
+@media screen and (max-width: 768px) {
+  .navbar .container-fluid {
+    justify-content: space-between;
+  }
+
+  .navbar-toggler {
+    order: 3;
+    margin-left: auto;
+  }
+}
+
 .cards {
   background-color: #f3e7e2;
 }
@@ -182,12 +213,13 @@ section {
 }
 
 .card {
-  transition: box-shadow 0.3s ease;
+  transform: translateY(0);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  overflow: hidden;
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .table-responsive {
@@ -259,7 +291,7 @@ button {
   background-color: #111;
   overflow-x: hidden;
   padding-top: 60px;
-  transition: 0.5s;
+  transition: width 0.3s ease-in-out;
 }
 
 /* navigation menu links */
@@ -269,7 +301,7 @@ button {
   font-size: 25px;
   color: #818181;
   display: block;
-  transition: 0.3s;
+  transition: color 0.2s ease;
 }
 
 .sidenav a:hover {
@@ -316,6 +348,17 @@ button {
   margin-top: 30px;
 }
 
+@media screen and (max-width: 768px) {
+  .float-left,
+  .float-right {
+    width: 50% !important; /* Increase from current 20% */
+    height: auto;
+    margin: 20px auto;
+    display: block;
+    float: none;
+  }
+}
+
 .clearfix::after {
   content: "";
   display: table;
@@ -338,8 +381,13 @@ a img {
 /* Menu styles */
 
 .menu-item {
-  border-bottom: 1px solid #ccc;
-  padding: 15px 0;
+  transition: background-color 0.2s ease;
+  padding: 15px 10px;
+}
+
+.menu-item:hover {
+  background-color: rgba(114, 95, 87, 0.1);
+  border-radius: 4px;
 }
 
 .menu-item:last-child {
@@ -408,6 +456,27 @@ a img {
 
 input {
   margin-bottom: 5%;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.about-us p:nth-child(1) {
+  transition-delay: 0.2s;
+}
+.about-us p:nth-child(2) {
+  transition-delay: 0.4s;
+}
+.about-us p:nth-child(3) {
+  transition-delay: 0.6s;
 }
 
 /* Footer styles */
